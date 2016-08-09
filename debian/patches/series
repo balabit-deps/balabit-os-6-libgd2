@@ -1,0 +1,12 @@
+gdlib-config-uses-pkgconfig.patch
+libvpx-1.4.patch
+CVE-2015-8874.patch
+CVE-2015-8877.patch
+CVE-2016-3074.patch
+CVE-2016-5116.patch
+CVE-2016-5766.patch
+CVE-2016-6128.patch
+CVE-2016-6161.patch
+CVE-2016-6132.patch
+CVE-2016-6207.patch
+CVE-2016-6214.patch
