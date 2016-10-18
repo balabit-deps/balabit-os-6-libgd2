@@ -1,3 +1,22 @@
+libgd2 (2.1.1-4ubuntu0.16.04.5) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service via invalid read in
+    gdImageCreateFromTiffPtr()
+    - debian/patches/CVE-2016-6911.patch: check out of bounds reads in
+      src/gd_io_dp.c, check return code in src/gd_tiff.c.
+    - CVE-2016-6911
+  * SECURITY UPDATE: denial of service and possible code execution via
+    integer overflow in gdImageWebpCtx
+    - debian/patches/CVE-2015-7568.patch: check for overflow in
+      src/gd_webp.c.
+    - CVE-2016-7568
+  * SECURITY UPDATE: stack buffer overflow in dynamicGetbuf
+    - debian/patches/CVE-2016-8670.patch: avoid potentially dangerous
+      signed to unsigned conversion in src/gd_io_dp.c.
+    - CVE-2016-8670
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 18 Oct 2016 14:16:31 +0200
+
 libgd2 (2.1.1-4ubuntu0.16.04.3) xenial-security; urgency=medium
 
   * SECURITY UPDATE: out of bounds read in TGA file parsing
