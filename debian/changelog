@@ -1,3 +1,40 @@
+libgd2 (2.1.1-4ubuntu0.16.04.6) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: potential unsigned underflow
+    - debian/patches/CVE-2016-10166.patch: refactor loop in
+      src/gd_interpolation.c.
+    - CVE-2016-10166
+  * SECURITY UPDATE: DoS vulnerability in gdImageCreateFromGd2Ctx()
+    - debian/patches/CVE-2016-10167.patch: properly fail in src/gd_gd2.c.
+    - CVE-2016-10167
+  * SECURITY UPDATE: signed integer overflow in gd_io.c
+    - debian/patches/CVE-2016-10168.patch: check counts in src/gd_gd2.c.
+    - CVE-2016-10168
+  * SECURITY UPDATE: OOB reads of the TGA decompression buffer
+    - debian/patches/CVE-2016-6906-pre1.patch: fix coverty warning in
+      src/gd_tga.c.
+    - debian/patches/CVE-2016-6906-pre2.patch: fix TGA RLE decoding in
+      src/gd_tga.c.
+    - debian/patches/CVE-2016-6906-1.patch: check for overflow in
+      src/gd_tga.c.
+    - debian/patches/CVE-2016-6906-2.patch: add another overflow check in
+      src/gd_tga.c.
+    - CVE-2016-6906
+  * SECURITY UPDATE: double-free in gdImageWebPtr()
+    - debian/patches/CVE-2016-6912.patch: add helper function to indicate
+      failure in src/gd_webp.c.
+    - CVE-2016-6912
+  * SECURITY UPDATE: DoS via oversized image
+    - debian/patches/CVE-2016-9317.patch: check for oversized images in
+      src/gd.c.
+    - CVE-2016-9317
+  * SECURITY UPDATE: DoS via stack consumption
+    - debian/patches/CVE-2016-9933.patch: check for invalid colors in
+      src/gd.c.
+    - CVE-2016-9933
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 28 Feb 2017 10:29:32 -0500
+
 libgd2 (2.1.1-4ubuntu0.16.04.5) xenial-security; urgency=medium
 
   * SECURITY UPDATE: denial of service via invalid read in
