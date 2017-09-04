@@ -1,0 +1,2 @@
+tests/gif/unitialized_memory_read.gif
+tests/png/bug00381_2.gd

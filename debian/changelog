@@ -1,3 +1,27 @@
+libgd2 (2.1.1-4ubuntu0.16.04.8) xenial-security; urgency=medium
+
+
+  * SECURITY UPDATE: Double-free memory
+    - debian/patches/CVE-2017-6362.patch: introduces a static
+      helper to check failure or success in src/gd_png.c also
+      adds tests in tests/png/CMakeLists.txt, tests/Makemodule.am,
+      tests/png/bug00381_1.c, tests/png/bug00381_2.c.
+    - CVE-2017-6362
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Mon, 04 Sep 2017 17:23:24 -0300
+
+libgd2 (2.1.1-4ubuntu0.16.04.7) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: memory read vulnerability in GIF
+    - debian/patches/CVE-2017-7890.patch: zeroing buffers to avoid
+      information leak and adding test in src/gd_gif_in.c,
+      tests/gif/CMakeLists.txt, tests/MakeModule.am,
+      tests/gif/uninitialized_memory_read.c,
+      tests/gif/unitialized_memory_read.gif.
+    - CVE-2017-7890
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Thu, 10 Aug 2017 15:59:01 -0300
+
 libgd2 (2.1.1-4ubuntu0.16.04.6) xenial-security; urgency=medium
 
   * SECURITY UPDATE: potential unsigned underflow
