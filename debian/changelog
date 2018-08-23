@@ -1,3 +1,16 @@
+libgd2 (2.1.1-4ubuntu0.16.04.10) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Double free
+    - debian/patches/CVE-2018-1000222.patch: fix in
+      src/gd_bmp.c.
+    - CVE-2018-1000222
+  * SECURITY UPDATE: Infinite loop
+    - debian/patches/CVE-2018-5711.patch: fix in
+      src/gd_gif_in.c.
+    - CVE-2018-5711
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Thu, 23 Aug 2018 12:13:57 -0300
+
 libgd2 (2.1.1-4ubuntu0.16.04.8) xenial-security; urgency=medium
 
 
