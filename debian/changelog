@@ -1,3 +1,22 @@
+libgd2 (2.1.1-4ubuntu0.16.04.12) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: NULL pointer dereference in gdImageClone allows attackers
+    to crash an application via a specific function call sequence
+    - debian/patches/CVE-2018-14553.patch: remove manual style copy from
+      src/gd.c and appropriately set stylePos in tests/gdimageclone/style.c.
+    - CVE-2018-14553
+  * SECURITY UPDATE: possible read of uninitialized variable in 
+    gdImageCreateFromXbm()
+    - debian/patches/CVE-2019-11038.patch: error out if sscanf() doesn't receive
+      input in src/gd_xbm.c.
+    - debian/patches/CVE-2019-11038-test.patch: add a test for
+      CVE-2019-11038.patch.
+    - debian/patches/CVE-2019-11038-test-functions.patch: add functions for
+      CVE-2019-11038-test.patch.
+    - CVE-2019-11038
+
+ -- Avital Ostromich <avital.ostromich@canonical.com>  Thu, 26 Mar 2020 13:51:51 -0400
+
 libgd2 (2.1.1-4ubuntu0.16.04.11) xenial-security; urgency=medium
 
   * SECURITY UPDATE: buffer overflow in gdImageColorMatch
